@@ -1,12 +1,19 @@
+import os
 import requests
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 class PlagiaGuard:
     def __init__(self, code):
         self.code = code
 
     def logic(self):
-        # GITHUB_TOKEN = "token"
-
+        GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Get the token from environment variable
+        if not GITHUB_TOKEN:
+            raise ValueError("GitHub token not found. Please set the GITHUB_TOKEN environment variable.")
+        
         query = self.code
 
         url = f"https://api.github.com/search/code?q={query}+in:file+language:python"
