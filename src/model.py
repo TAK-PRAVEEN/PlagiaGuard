@@ -5,7 +5,7 @@ class PlagiaGuard:
         self.code = code
 
     def logic(self):
-        GITHUB_TOKEN = "token"
+        # GITHUB_TOKEN = "token"
 
         query = self.code
 
