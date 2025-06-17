@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #051120; /* Dark blue background */
+    background-image: url('/static/Logo.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #e0e0e0; /* Light text color for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header with Logo */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(14, 34, 64, 0.85); /* Semi-transparent dark blue background */
+    position: relative;
+}
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Headings */
+h1 {
+    color: #aaccff; /* Light blue for headings */
+}
+
+/* Form Styling */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(18, 37, 63, 0.9); /* Semi-transparent dark background */
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #2a4d69;
+    border-radius: 4px;
+    background-color: #1b365d;
+    color: #e0e0e0;
+}
+
+input[type="text"]::placeholder {
+    color: #a0a8b9;
+}
+
+button {
+    background-color: #2a4d69; /* Button base color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f3550; /* Darker shade on hover */
+}
+
+/* Results Section */
+.results {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(18, 37, 63, 0.9);
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.results ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+a {
+    color: #aad4ff; /* Light blue link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Go back link */
+a[href="/"] {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    color: #99bbff;
+    font-weight: bold;
+}
+
