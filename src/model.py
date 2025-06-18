@@ -3,7 +3,6 @@ import requests
 from dotenv import load_dotenv
 import pandas as pd
 
-# Load environment variables from .env file
 load_dotenv()
 
 class PlagiaGuard:
@@ -11,7 +10,7 @@ class PlagiaGuard:
         self.code = code
 
     def logic(self):
-        GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Get the token from environment variable
+        GITHUB_TOKEN = os.getenv("GITHUB_TOKEN") 
         if not GITHUB_TOKEN:
             raise ValueError("GitHub token not found. Please set the GITHUB_TOKEN environment variable.")
         
@@ -38,16 +37,29 @@ class PlagiaGuard:
         results = self.output()
         if results:
             links = {}
-            for item in results['items'][:5]:
+            for item in results['items'][:10]:
                 links[item['name']] = item['html_url']
             return links
         else:
             return {}
     
     def table_output(self):
-        data = self.show_results()
+        links = self.show_results()
+        if links:
+            data = {
+                "Name" : list(links.keys()),
+                "URL" : list(links.values())
+            }
+            df = pd.DataFrame(data = data)
+            indexes = [i for i in range(1, 11)]
+            df.index = indexes
 
-        df = pd.DataFrame(data = data, columns = ["Name", "URL"])
+            df['URL'] = df['URL'].apply(lambda url: f'<a href="{url}" target="_blank" rel="noopener noreferrer">{url}</a>')
+
+            html_table = df.to_html(escape = False, index = False)
+            return html_table
+        else:
+            return {}
 
 
 

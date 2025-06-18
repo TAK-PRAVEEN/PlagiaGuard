@@ -1,35 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Input Form</title>
-    <link rel="stylesheet" href="/static/style.css" />
-</head>
-<body>
-    <img src="static\Logo.png" alt="Logo">
-    <form action="/submit" method="post">
-        <label for="code">Code:</label>
-        <input type="text" id="code" name="code" required />
-        <button type="submit">Submit</button>
-    </form>
-
-    {% if links is not none %}
-        <h1>Search Results</h1>
-        {% if links %}
-            <ul>
-            {% for name, url in links.items() %}
-                <li><a href="{{ url }}">{{ name }}</a></li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>No results found or an error occurred.</p>
-        {% endif %}
-    {% endif %}
-    
-    <a href="/">Go back</a>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,8 +5,8 @@
     <title>Input Form</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
-<body>
-    <header>
+<body class="body">
+    <header class="body">
         <img src="/static/Logo.png" alt="Logo" class="logo"> <!-- Replace with your logo URL -->
     </header>
 
@@ -48,22 +16,7 @@
         <input type="text" id="code" name="code" required />
         <button type="submit">Submit</button>
     </form>
-
-    {% if links is not none %}
-        <div class="results">
-            <div class="label"><b>Searched Results</b></div>
-            {% if links %}
-                <ul>
-                {% for name, url in links.items() %}
-                    <li><a href="{{ url }}">{{ name }}</a></li>
-                {% endfor %}
-                </ul>
-            {% else %}
-                <p>No results found or an error occurred.</p>
-            {% endif %}
-        </div>
-    {% endif %}
     
-    <a href="/" class="back"><img src="/static/reset.png" alt="Go Back / Reset" class="back"></a>
+    
 </body>
 </html>

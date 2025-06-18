@@ -18,5 +18,5 @@ async def read_form(request: Request):
 @app.post("/submit", response_class=HTMLResponse)
 async def handle_form(request: Request, code: str = Form(...)):
     plagia_guard = PlagiaGuard(code)
-    results = plagia_guard.show_results()
-    return templates.TemplateResponse("home.html", {"request": request, "links": results})
+    results = plagia_guard.table_output()
+    return templates.TemplateResponse("table.html", {"request": request, "html_table": results})
