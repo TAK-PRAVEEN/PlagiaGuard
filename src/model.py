@@ -1,6 +1,7 @@
 import os
 import requests
 from dotenv import load_dotenv
+import pandas as pd
 
 # Load environment variables from .env file
 load_dotenv()
@@ -37,12 +38,19 @@ class PlagiaGuard:
         results = self.output()
         if results:
             links = {}
-            for item in results['items'][:10]:
+            for item in results['items'][:5]:
                 links[item['name']] = item['html_url']
             return links
         else:
             return {}
     
+    def table_output(self):
+        data = self.show_results()
+
+        df = pd.DataFrame(data = data, columns = ["Name", "URL"])
+
+
+
 
 
 
