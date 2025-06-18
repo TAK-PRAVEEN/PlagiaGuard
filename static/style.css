@@ -1,20 +1,17 @@
-/* Global Styles */
-body {
+/* body {
     font-family: Arial, sans-serif;
-    background-color: #051120; /* Dark blue background */
-    background-image: url('/static/Logo.png'); 
+    background-color: #051120; /
     background-size: cover;
     background-position: center;
-    color: #e0e0e0; /* Light text color for contrast */
+    color: #e0e0e0; 
     margin: 0;
     padding: 0;
 }
 
-/* Header with Logo */
 header {
     text-align: center;
     padding: 20px;
-    background-color: rgba(14, 34, 64, 0.85); /* Semi-transparent dark blue background */
+    background-color: rgba(14, 34, 64, 0.85); 
     position: relative;
 }
 .logo {
@@ -22,16 +19,14 @@ header {
     height: auto;
 }
 
-/* Headings */
 h1 {
-    color: #aaccff; /* Light blue for headings */
+    color: #aaccff; /
 }
 
-/* Form Styling */
 form {
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(18, 37, 63, 0.9); /* Semi-transparent dark background */
+    background-color: rgba(18, 37, 63, 0.9); 
     border-radius: 8px;
     max-width: 400px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
@@ -52,7 +47,7 @@ input[type="text"]::placeholder {
 }
 
 button {
-    background-color: #2a4d69; /* Button base color */
+    background-color: #2a4d69; 
     color: white;
     padding: 10px;
     border: none;
@@ -64,10 +59,9 @@ button {
 }
 
 button:hover {
-    background-color: #1f3550; /* Darker shade on hover */
+    background-color: #1f3550; 
 }
 
-/* Results Section */
 .results {
     margin: 20px auto;
     padding: 20px;
@@ -83,7 +77,7 @@ button:hover {
 }
 
 a {
-    color: #aad4ff; /* Light blue link color */
+    color: #aad4ff; 
     text-decoration: none;
 }
 
@@ -91,7 +85,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Go back link */
+
 a[href="/"] {
     display: block;
     text-align: center;
@@ -99,4 +93,88 @@ a[href="/"] {
     color: #99bbff;
     font-weight: bold;
 }
+ */
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #061121; /* Light background color */
+            background-image: url('your-background-image-url.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #061121; /* Semi-transparent background for logo area */
+            position: relative;
+        }
+        .logo {
+            width: 250px; /* Adjust logo size */
+            height: auto;
+        }
+        .label{
+            color: #1c63c1;
+            font-size: 18px;
+            font-family: "Times New Roman", Times, serif;
+        }
+        h1 {
+            color: #2c3e50; /* Darker color for headings */
+        }
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            max-width: 400px; /* Limit form width */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 375px;
+            padding: 10px;
+            margin: 20px 0px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db; /* Button color */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 395px;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker button color on hover */
+        }
+        .results {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .results ul {
+            list-style-type: decimal; /* Numbered list */
+            padding-left: 20px; /* Indent list */
+        }
+        a {
+            color: #3498db; /* Link color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        .back{
+            width: 80px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }

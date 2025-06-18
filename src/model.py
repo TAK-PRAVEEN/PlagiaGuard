@@ -30,7 +30,7 @@ class PlagiaGuard:
         if response.status_code == 200:
             return response.json()
         else:
-            return False
+            return {}
         
 
     def show_results(self):
@@ -41,7 +41,7 @@ class PlagiaGuard:
                 links[item['name']] = item['html_url']
             return links
         else:
-            return f"GitHub API error: {self.logic().status_code}"
+            return {}
     
 
 
