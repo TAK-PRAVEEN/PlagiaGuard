@@ -50,9 +50,9 @@ class PlagiaGuard:
                 "Name" : list(links.keys()),
                 "URL" : list(links.values())
             }
-            df = pd.DataFrame(data = data)
+            df = pd.DataFrame(data = data, index = range(10))
             indexes = [i for i in range(1, 11)]
-            df.index = indexes
+            df.insert(0, "S.No.", indexes)
 
             df['URL'] = df['URL'].apply(lambda url: f'<a href="{url}" target="_blank" rel="noopener noreferrer">{url}</a>')
 

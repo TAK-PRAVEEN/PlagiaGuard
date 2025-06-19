@@ -7,65 +7,65 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #061121; 
-    background-image: url('/static/background.jpg');
+    background-image: url('/static/background.png');
     background-repeat: repeat;
     background-size: cover;
     background-position: center
 }
 
 .container {
-  max-width: 80rem; /* approx max-w-5xl */
-  width: 100%;
-  overflow: hidden;
-  border-radius: 1rem;
-  border: 2px solid #d1d5db; /* gray-300 */
-  padding: 1rem;
-  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
-  box-shadow: 0 10px 15px -3px rgb(30 115 190 / 0.5);
+    max-width: 80rem; 
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid #d1d5db; 
+    padding: 1rem;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    box-shadow: 0 10px 15px -3px rgb(30 115 190 / 0.5);
 }
 
 .table-wrapper {
-  border-radius: 0.5rem 0.5rem 0rem 0rem;
-  overflow: hidden;
-  border: 1px solid #d1d5db;
-  background: linear-gradient(90deg, #1e73be 0%, #1a5a7f 100%);
-  color: white;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    overflow: hidden;
+    border: 1px solid white;
+    background: linear-gradient(90deg, #1e73be 0%, #1a5a7f 100%);
+    color: white;
 }
 
 .table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: top;
-  padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 1rem 1.5rem;
 }
 
 .table-header h2 {
-  font-weight: 400;
-  font-size: 1.25rem; 
-  margin: 0;
-  display: block;
-  text-align: left;
-  margin-right: auto;
+    font-weight: 400;
+    font-size: 1.25rem; 
+    margin: 0;
+    display: block;
+    text-align: left;
+    margin-right: auto;
 }
 
 table {
-  width: 100%;
-  border-collapse: separate; /* Use collapse to merge borders */
-  font-size: 0.875rem;
-  color: #061121;
-  border: none;
-  border-radius: 0rem 0rem 0.5rem 0.5rem;
-  /* border: 1px solid #d1d5db; Optional: keep this for inner border */
+    width: 100%;
+    border-collapse: separate; 
+    font-size: 0.875rem;
+    color: #061121;
+    border: 1px solid white; 
+    border-radius: 0rem 0rem 0.5rem 0.5rem; 
+    table-layout: auto;
 }
 
 thead tr {
-  background-color: rgba(147, 197, 253, 0);
+    background-color: rgba(147, 197, 253, 0);
 }
 
 th, td {
-  padding: 0.5rem 1rem;
-  text-align: left;
-  vertical-align: middle;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    vertical-align: middle;
 }
 
 .back {
@@ -78,6 +78,14 @@ th, td {
     margin-left: auto;  
 }
 
+.back:hover{
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+}
+
+.back:hover::after {
+    transform: translateY(0);
+}
 a {
     color: #0E3386; 
     text-decoration: none;
@@ -89,9 +97,17 @@ a:hover {
 }
 
 a:visited {
-  color: #0E3386 ;
+    color: #0E3386 ;
 }
 
 a:active {
-  color: blue;
+    color: blue;
 }
+
+@media (max-width: 768px) {
+            .back {
+                width: 60px;
+                height: 60px;
+                font-size: 18px;
+            }
+          }
