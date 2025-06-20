@@ -86,6 +86,7 @@ PlagiaGuard is a research/educational project. It does not guarantee 100% accura
 
 ## 🙌 Contributors
 Praveen Tak – <a href="https://www.linkedin.com/in/praveen-tak-50b669272/">LinkedIn Profile</a>
+
 Team: Hash Splinters
 
 ---
