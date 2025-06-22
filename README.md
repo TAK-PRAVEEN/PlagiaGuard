@@ -55,9 +55,9 @@ PlagiaGuard/
 │   ├── table.html        # Results
 ├── app.py                # Main FastAPI app
 ├── src                   # Source Python File
-    ├── model.py          # Core logic for AST + embeddings
+│    ├── model.py          # Core logic for AST + embeddings
 ├── Notebooks             # Notebook
-    ├── logic.ipynb       # Logic created Notebook
+│   ├── logic.ipynb       # Logic created Notebook
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
 ```
