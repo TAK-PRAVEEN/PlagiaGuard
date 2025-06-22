@@ -76,6 +76,12 @@ pip install -r requirements.txt
 ```
 3. Run the App
 ```bash
+python app.py
+```
+
+OR
+
+```bash
 uvicorn app:app --reload
 ```
 
