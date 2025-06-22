@@ -47,6 +47,12 @@ PlagiaGuard is a smart system designed to detect plagiarism in programming assig
 
 ```bash
 PlagiaGuard/
+├── static/           # Static files 
+│   ├── style.css
+│   └── table.css
+├── templates/             # HTML templates
+│   ├── home.html         # Homepage
+│   ├── table.html        # Results
 ├── app.py                # Main FastAPI app
 ├── src                   # Source Python File
     ├── model.py          # Core logic for AST + embeddings
